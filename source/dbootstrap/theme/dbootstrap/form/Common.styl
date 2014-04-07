@@ -12,7 +12,7 @@
 // TextBox
 .dbootstrap .dijitTextBox {
     display: inline-block;
-    font-size: $baseFontSize;
+    font-size: $fontSizeBase;
     color: $gray;
     border-radius: $inputBorderRadius;
     background-color: $inputBackground;
@@ -39,7 +39,7 @@
 }
 
 .dj_webkit .dbootstrap .dijitInputField .dijitInputInner {
-    height: $baseLineHeight;
+    height: $lineHeightBase;
 }
 
 .dj_webkit .dbootstrap .dijitInline .dijitInputField .dijitInputInner {
@@ -61,7 +61,7 @@
 .dj_webkit .dbootstrap textarea.dijitTextAreaDisabled,
 .dbootstrap .dijitTextBoxDisabled,
 .dbootstrap .dijitTextBoxReadOnly {
-    color: $inputDisabledColor;
+    color: $inputColor;
 }
 
 // TextArea
@@ -91,12 +91,12 @@
 
 // Validation
 .dbootstrap .dijitTextBoxError {
-    color: $errorText;
-    border-color: $errorText;
+    color: $stateDangerText;
+    border-color: $stateDangerText;
 }
 
 .dbootstrap .dijitTextBoxError.dijitTextBoxFocused {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten($errorText, 20%);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten($stateDangerText, 20%);
 }
 
 .dbootstrap .dijitValidationContainer {
