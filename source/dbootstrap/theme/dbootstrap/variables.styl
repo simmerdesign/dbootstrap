@@ -28,7 +28,6 @@ $abbrBorderColor = $grayLight;
 $headingsSmallColor = $grayLight;
 
 $blockquoteSmallColor = $grayLight;
-$blockquoteFontSize = ($fontSizeBase * 1.25);
 $blockquoteBorderColor = $grayLighter;
 
 $pageHeaderBorderColor = $grayLighter;
@@ -103,6 +102,8 @@ $headingsFontFamily = inherit; // empty to use BS default, $fontFamilyBase
 $headingsFontWeight = 500; // instead of browser default, bold
 $headingsLineHeight = 1.1;
 $headingsColor = inherit; // empty to use BS default, $textColor
+
+$blockquoteFontSize = ($fontSizeBase * 1.25);
 
 
 // Icons path
@@ -196,7 +197,7 @@ $inputBorderFocus = #66afe9;
 
 $inputColorPlaceholder = $grayLight;
 
-$inputHeightBase = ($lineHeightComputed + (paddingBaseVertical * 2) + 2);
+$inputHeightBase = ($lineHeightComputed + ($paddingBaseVertical * 2) + 2);
 $inputHeightLarge = (ceil($fontSizeLarge * $lineHeightLarge) + ($paddingLargeVertical * 2) + 2);
 $inputHeightSmall = (floor($fontSizeSmall * $lineHeightSmall) + ($paddingSmallVertical * 2) + 2);
 
@@ -307,7 +308,7 @@ $navbarCollapseMaxHeight = 340px;
 
 $navbarDefaultColor = #777;
 $navbarDefaultBackground = #f8f8f8;
-$navbarDefaultBorder = darken($navbarDefaultBg, 6.5%);
+$navbarDefaultBorder = darken($navbarDefaultBackground, 6.5%);
 
 $navbarDefaultLinkColor = #777;
 $navbarDefaultLinkHoverColor = #333;
@@ -385,7 +386,7 @@ $paginationDisabledBorder = #ddd;
 // -------------------------
 $stateSuccessText = #3c763d;
 $stateSuccessBackground = #dff0d8;
-$stateSuccessBorder = darken(spin(@stateSuccessBackground, -10), 5%);
+$stateSuccessBorder = darken(spin($stateSuccessBackground, -10), 5%);
 
 $stateInfoText = #31708f;
 $stateInfoBackground = #d9edf7;
@@ -436,9 +437,9 @@ $popoverTitleBackground = darken($popoverBackground, 3%);
 $labelDefaultBackground = $grayLight;
 $labelPrimaryBackground = $brandPrimary;
 $labelSuccessBackground = $brandSuccess;
-$labelInfoBackground = @brandInfo;
-$labelWarningBackground = @brandWarning;
-$labelDangerBackground = @brandDanger;
+$labelInfoBackground = $brandInfo;
+$labelWarningBackground = $brandWarning;
+$labelDangerBackground = $brandDanger;
 
 $labelColor = #fff;
 $labelLinkHoverColor = #fff;
