@@ -375,40 +375,115 @@ $paginationDisabledBorder = #ddd;
 
 
 
-// Form states and alerts
+//== Form states and alerts
 // -------------------------
-$warningText = #c09853;
-$warningBackgroundContainer = #fcf8e3;
-$warningBorder = darken(spin($warningBackgroundContainer, -10), 3%);
+$stateSuccessText = #3c763d;
+$stateSuccessBackground = #dff0d8;
+$stateSuccessBorder = darken(spin(@stateSuccessBackground, -10), 5%);
 
-$errorText = #b94a48;
-$errorBackgroundContainer = #f2dede;
-$errorBorder = darken(spin($errorBackgroundContainer, -10), 3%);
+$stateInfoText = #31708f;
+$stateInfoBackground = #d9edf7;
+$stateInfoBorder = darken(spin($stateInfoBackground, -10), 7%);
 
-$successText = #468847;
-$successBackgroundContainer = #dff0d8;
-$successBorder = darken(spin($successBackgroundContainer, -10), 5%);
+$stateWarningText = #8a6d3b;
+$stateWarningBackground = #fcf8e3;
+$stateWarningBorder = darken(spin($stateWarningBackground, -10), 5%);
 
-$infoText = #3a87ad;
-$infoBackgroundContainer = #d9edf7;
-$infoBorder = darken(spin($infoBackgroundContainer, -10), 7%);
+$stateDangerText = #a94442;
+$stateDangerBackground = #f2dede;
+$stateDangerBorder = darken(spin($stateDangerBackground, -10), 5%);
 
 
-// Tooltips and popovers
+
+// Tooltips
 // -------------------------
+
+$tooltipMaxWidth = 200px;
 $tooltipColor = #fff;
 $tooltipBackground = #000;
+$tooltipOpacity = .9;
 $tooltipArrowWidth = 5px;
 $tooltipArrowColor = $tooltipBackground;
 
+
+
+// Popovers
+// -------------------------
+
 $popoverBackground = #fff;
-$popoverArrowWidth = 5px;
+$popoverBorderColor = rgba(0,0,0,.2);
+$popoverFallbackBorderColor = #ccc;
+
+$popoverArrowWidth = 10px;
 $popoverArrowColor = #fff;
+$popoverArrowOuterWidth = $popoverArrowWidth + 1;
+$popoverArrowOuterColor = fadein($popoverBorderColor, 5%);
+$popoverArrowOuterFallbackColor = darken($popoverFallbackBorderColor, 5%);
+
+$popoverMaxWidth = 276px;
 $popoverTitleBackground = darken($popoverBackground, 3%);
 
-// Special enhancement for popovers
-$popoverArrowOuterWidth = $popoverArrowWidth + 1;
-$popoverArrowOuterColor = rgba(0,0,0,.25);
+
+//== Labels
+// -------------------------
+
+$labelDefaultBackground = $grayLight;
+$labelPrimaryBackground = $brandPrimary;
+$labelSuccessBackground = $brandSuccess;
+$labelInfoBackground = @brandInfo;
+$labelWarningBackground = @brandWarning;
+$labelDangerBackground = @brandDanger;
+
+$labelColor = #fff;
+$labelLinkHoverColor = #fff;
+
+
+//== Modals
+// -------------------------
+
+$modalInnerPadding = 20px;
+$modalTitlePadding = 15px;
+$modalTitleLineHeight = $lineHeightBase;
+
+$modalContentBackground = #fff;
+$modalContentBorderColor = rgba(0,0,0,.2);
+$modalContentFallbackBorderColor = #999;
+
+$modalBackdropBackground = #000;
+$modalBackdropOpacity = .5;
+$modalHeaderBorderColor = #e5e5e5;
+$modalFooterBorderColor = $modalHeaderBorderColor;
+
+$modalLg = 900px;
+$modalMd = 600px;
+$modalSm = 300px;
+
+
+//== Alerts
+// -------------------------
+
+$alertPadding = 15px;
+$alertBorderRadius = $borderRadiusBase;
+$alertLinkFontWeight = bold;
+
+$alertSuccessBackground = $stateSuccessBackground;
+$alertSuccessText = $stateSuccessText;
+$alertSuccessBorder = $stateSuccessBorder;
+
+$alertInfoBackground = $stateInfoBackground;
+$alertInfoText = $stateInfoText;
+$alertInfoBorder = $stateInfoBorder;
+
+$alertWarningBackground = $stateWarningBackground;
+$alertWarningText = $stateWarningText;
+$alertWarningBorder = $stateWarningBorder;
+
+$alertDangerBackground = $stateDangerBackground;
+$alertDangerText = $stateDangerText;
+$alertDangerBorder = $stateDangerBorder;
+
+
+
 
 // Tree
 // -------------------------

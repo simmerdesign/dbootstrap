@@ -2,13 +2,13 @@
 // :license: See LICENSE.txt.
 
 .dbootstrap .alert {
-    padding: 8px 35px 8px 14px;
+    background-color: $alertWarningBackground;
+    border: 1px solid $alertWarningBorder;
+    border-radius($borderRadiusBase);
+    color: $alertWarningText;
     margin-bottom: $baseLineHeight;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    background-color: $warningBackgroundContainer;
-    border: 1px solid $warningBorder;
-    border-radius(4px);
-    color: $warningText;
+    padding: $alertPadding;
+    text-shadow: none;
 }
 
 .dbootstrap .alert h1,
@@ -22,22 +22,22 @@
 // -------------------------
 
 .dbootstrap .alert-success {
-    background-color: $successBackgroundContainer;
-    border-color: $successBorder;
-    color: $successText;
+    background-color: $alertSuccessBackground;
+    border-color: $alertSuccessBorder;
+    color: $alertSuccessText;
 }
 
 .dbootstrap .alert-danger,
 .dbootstrap .alert-error {
-    background-color: $errorBackgroundContainer;
-    border-color: $errorBorder;
-    color: $errorText;
+    background-color: $alertDangerBackground;
+    border-color: $alertDangerBorder;
+    color: $alertDangerText;
 }
 
 .dbootstrap .alert-info {
-    background-color: $infoBackgroundContainer;
-    border-color: $infoBorder;
-    color: $infoText;
+    background-color: $alertInfoBackground;
+    border-color: $alertInfoBorder;
+    color: $alertInfoText;
 }
 
 
@@ -45,8 +45,7 @@
 // -------------------------
 
 .dbootstrap .alert-block {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: $alertPadding;
 }
 .dbootstrap .alert-block > p,
 .dbootstrap .alert-block > ul {
