@@ -22,6 +22,18 @@ $brandWarning = #f0ad4e;
 $brandDanger = #d9534f;
 
 
+// Text muted color
+$text-muted = $grayLight;
+$abbrBorderColor = $grayLight;
+$headingsSmallColor = $grayLight;
+
+$blockquoteSmallColor = $grayLight;
+$blockquoteFontSize = ($fontSizeBase * 1.25);
+$blockquoteBorderColor = $grayLighter;
+
+$pageHeaderBorderColor = $grayLighter;
+
+
 // Bootstrap 2 colors
 $blue = #049cdb;
 $blueDark = #0064cd;
@@ -71,6 +83,7 @@ $fontFamilySans = "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fontFamilySerif = Georgia, "Times New Roman", Times, serif;
 $fontFamilyMono = Monaco, Menlo, Consolas, "Courier New", monospace;
 $fontFamilyBase = $fontFamilySans;
+$fontFamilyAlt = $serifFontFamily;
 
 $fontSizeBase = 14px;
 $fontSizeLarge = ceil(($fontSizeBase * 1.25)); // ~18px
@@ -85,13 +98,6 @@ $fontSizeH6 = ceil(($fontSizeBase * 0.85)); // ~12px
 
 $lineHeightBase = 1.428571429; // 20/14
 $lineHeightComputed = floor(($fontSizeBase * $lineHeightBase)); // ~20px
-
-$headingsFontFamily:    inherit;
-$headingsFontWeight:    500;
-$headingsFontHeight:    1.1;
-$headingsColor:          inherit;
-$baseLineHeight = 1.428571429;
-$altFontFamily = $serifFontFamily;
 
 $headingsFontFamily = inherit; // empty to use BS default, $fontFamilyBase
 $headingsFontWeight = 500; // instead of browser default, bold
