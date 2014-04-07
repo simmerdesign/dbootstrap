@@ -83,12 +83,24 @@ h6, .h6 {
   }
 }
 
-h1, .h1 { font-size: $fontSizeH1; }
-h2, .h2 { font-size: $fontSizeH2; }
-h3, .h3 { font-size: $fontSizeH3; }
-h4, .h4 { font-size: $fontSizeH4; }
-h5, .h5 { font-size: $fontSizeH5; }
-h6, .h6 { font-size: $fontSizeH6; }
+h1, .h1 {
+  font-size: $fontSizeH1;
+}
+h2, .h2 {
+  font-size: $fontSizeH2;
+}
+h3, .h3 {
+  font-size: $fontSizeH3;
+}
+h4, .h4 {
+  font-size: $fontSizeH4;
+}
+h5, .h5 {
+  font-size: $fontSizeH5;
+}
+h6, .h6 {
+  font-size: $fontSizeH6;
+}
 
 
 
@@ -128,7 +140,8 @@ ol {
 
 // Inline turns list items into inline-block
 .list-inline {
-  .list-unstyled();
+  padding-left: 0;
+  list-style: none;
   margin-left: -5px;
 
   > li {
@@ -137,10 +150,9 @@ ol {
     padding-right: 5px;
   }
 }
-
 // Description Lists
 dl {
-  margin-top: 0; // Remove browser default
+  margin-top: 0;
   margin-bottom: $lineHeightComputed;
 }
 dt,
@@ -159,18 +171,18 @@ dd {
 // Defaults to being stacked without any of the below styles applied, until the
 // grid breakpoint is reached (default of ~768px).
 
-@media (min-width: $gridFloatBreakpoint) {
+@media screen and (min-width: $gridFloatBreakpoint) {
   .dl-horizontal {
     dt {
       float: left;
       width: ($componentOffsetHorizontal - 20);
       clear: left;
       text-align: right;
-      .text-overflow();
+      /*.text-overflow();*/
     }
     dd {
       margin-left: $componentOffsetHorizontal;
-      &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+      /*&:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present*/
     }
   }
 }
@@ -244,7 +256,9 @@ blockquote.pull-right {
   footer,
   small,
   .small {
-    &:before { content: ''; }
+    &:before {
+      content: '';
+    }
     &:after {
       content: '\00A0 \2014'; // nbsp, em dash
     }
