@@ -2,7 +2,7 @@
 Dojo Bootstrap
 ##############
 
-Bootstrap theme for Dojo.
+Bootstrap 3 theme for Dojo.
 
 .. image:: https://raw.github.com/thesociable/dbootstrap/master/resource/preview.png
 
@@ -10,7 +10,7 @@ Bootstrap theme for Dojo.
 Get The Code
 ************
 
-    $ git clone --recursive git://github.com/thesociable/dbootstrap.git
+    $ git clone --recursive git://github.com/simmerdesign/dbootstrap3.git
 
 ******************
 Build Requirements
