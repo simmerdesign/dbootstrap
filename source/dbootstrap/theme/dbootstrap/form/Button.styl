@@ -14,7 +14,7 @@
 
 .dbootstrap .dijitButtonNode .dijitIcon {
     // Keeps button heights with and without icons the same
-    line-height: $baseLineHeight * 0.65;
+    line-height: $lineHeightBase * 0.65;
 }
 
 .dbootstrap .dijitButton .dijitButtonNode,
@@ -24,11 +24,11 @@
     display: block; // Stretch to fill space
     padding: 6px 14px;
     margin-bottom: 0; // For input.btn
-    font-size: $baseFontSize;
+    font-size: $fontSizeBase;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    buttonBackground($btnBackground, $btnBackgroundHighlight, $grayDark, 0 1px 1px rgba(255,255,255,.75));
+    background-color: $btnBackground;
     border: 1px solid $btnBorder;
     border-bottom-color: darken($btnBorder, 10%);
     border-radius: 4px;
@@ -37,27 +37,27 @@
 
 // Colours
 .dbootstrap .primary .dijitButtonNode {
-    buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+    background-color: $btnPrimaryBackground;
 }
 
 .dbootstrap .warning .dijitButtonNode {
-    buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+    background-color: $btnWarningBackground;
 }
 
 .dbootstrap .danger .dijitButtonNode {
-    buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+    background-color: $btnDangerBackground;
 }
 
 .dbootstrap .success .dijitButtonNode {
-    buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+    background-color: $btnSuccessBackground;
 }
 
 .dbootstrap .info .dijitButtonNode {
-    buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+    background-color: $btnInfoBackground;
 }
 
 .dbootstrap .inverse .dijitButtonNode {
-    buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+    background-color: $btnInverseBackground;
 }
 
 // Hover
