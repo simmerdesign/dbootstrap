@@ -57,8 +57,11 @@
 .dbootstrap .dgrid .dgrid-row:hover,
 .dbootstrap .dgrid .dgrid-row:hover .dgrid-cell {
     background-color: $gridHoverBackground;
-    color: $gridSelectedColor;
+    color: darken($gridSelectedColor, 10%);
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.dbootstrap .dgrid .dgrid-row:hover .dgrid-cell a {
+    color: $gridSelectedColor;
 }
 
 // Selection
