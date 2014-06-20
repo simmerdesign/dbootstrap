@@ -1,104 +1,106 @@
 // :copyright: Copyright 2012 Martin Pengelly-Phillips
 // :license: See LICENSE.txt.
 
-/*.dbootstrap fieldset {
-    @extend .dbootstrap .well;
-}*/
+.dbootstrap {
+    /*fieldset {
+        @extend .dbootstrap .well;
+    }*/
 
-.dbootstrap label {
-    vertical-align: middle;
-}
+    label {
+        vertical-align: middle;
+    }
 
-// TextBox
-.dbootstrap .dijitTextBox {
-    display: inline-block;
-    font-size: $fontSizeBase;
-    color: $gray;
-    border-radius: $inputBorderRadius;
-    background-color: $inputBackground;
-    border: 1px solid $inputBorder;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    transition: border linear .2s, box-shadow linear .2s;
-}
+    // TextBox
+    .dijitTextBox {
+        display: inline-block;
+        font-size: $fontSizeBase;
+        color: $gray;
+        border-radius: $inputBorderRadius;
+        background-color: $inputBackground;
+        border: 1px solid $inputBorder;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        transition: border linear .2s, box-shadow linear .2s;
+    }
 
-.dbootstrap .dijitTextBoxFocused {
-    outline: none;
-    border-color: rgba(82,168,236,.8);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-}
+    .dijitTextBoxFocused {
+        outline: none;
+        border-color: rgba(82,168,236,.8);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    }
 
-.dbootstrap .dijitInputContainer {
-    padding: 6px 6px;
-}
+    .dijitInputContainer {
+        padding: 6px 6px;
+    }
 
-.dbootstrap .dijitInputField .dijitInputInner {
-}
+    .dijitInputField .dijitInputInner {
+    }
 
-.dj_webkit .dbootstrap .dijitInputContainer {
-    padding: 4px 4px;
-}
+    .dj_webkit .dijitInputContainer {
+        padding: 4px 4px;
+    }
 
-.dj_webkit .dbootstrap .dijitInputField .dijitInputInner {
-    height: $lineHeightBase;
-}
+    .dj_webkit .dijitInputField .dijitInputInner {
+        height: $lineHeightBase;
+    }
 
-.dj_webkit .dbootstrap .dijitInline .dijitInputField .dijitInputInner {
-    height: inherit;
-}
+    .dj_webkit .dijitInline .dijitInputField .dijitInputInner {
+        height: inherit;
+    }
 
-.dbootstrap .dijitPlaceHolder {
-    font-style: normal;
-    padding: 4px 6px;
-}
+    .dijitPlaceHolder {
+        font-style: normal;
+        padding: 4px 6px;
+    }
 
-.dbootstrap .dijitTextBoxDisabled, .dbootstrap .dijitTextBoxReadOnly {
-    background-image: none;
-    box-shadow: none;
-    background-color: $inputDisabledBackground;
-}
+    .dijitTextBoxDisabled, .dijitTextBoxReadOnly {
+        background-image: none;
+        box-shadow: none;
+        background-color: $inputDisabledBackground;
+    }
 
-.dj_webkit .dbootstrap .dijitTextBoxDisabled input,
-.dj_webkit .dbootstrap textarea.dijitTextAreaDisabled,
-.dbootstrap .dijitTextBoxDisabled,
-.dbootstrap .dijitTextBoxReadOnly {
-    color: $inputColor;
-}
+    .dj_webkit .dijitTextBoxDisabled input,
+    .dj_webkit textarea.dijitTextAreaDisabled,
+    .dijitTextBoxDisabled,
+    .dijitTextBoxReadOnly {
+        color: $inputColor;
+    }
 
-// TextArea
-.dbootstrap .dijitTextArea {
-    padding: 4px 6px;
-    line-height: 1.5;
-    box-sizing: border-box;
-}
+    // TextArea
+    .dijitTextArea {
+        padding: 4px 6px;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
 
-// ComboBox
-.dbootstrap .dijitComboBox .dijitButtonNode {
-    @extend .dbootstrap .dijitComboButton .dijitButtonNode;
-}
+    // ComboBox
+    .dijitComboBox .dijitButtonNode {
+        @extend .dbootstrap .dijitComboButton .dijitButtonNode;
+    }
 
-.dbootstrap .dijitComboBox .dijitButtonNode.dijitArrowButton {
-    @extend .dbootstrap .dijitComboButton .dijitArrowButton;
-}
+    .dijitComboBox .dijitButtonNode.dijitArrowButton {
+        @extend .dbootstrap .dijitComboButton .dijitArrowButton;
+    }
 
-.dbootstrap .dijitComboBox input.dijitArrowButtonInner {
-    display: none;
-}
+    .dijitComboBox input.dijitArrowButtonInner {
+        display: none;
+    }
 
-.dbootstrap .dijitComboBoxDisabled .dijitButtonNode {
-    @extend .dbootstrap .dijitComboButtonDisabled .dijitButtonNode;
-    background-color: $inputDisabledBackground;
-}
+    .dijitComboBoxDisabled .dijitButtonNode {
+        @extend .dbootstrap .dijitComboButtonDisabled .dijitButtonNode;
+        background-color: $inputDisabledBackground;
+    }
 
-// Validation
-.dbootstrap .dijitTextBoxError {
-    color: $stateDangerText;
-    border-color: $stateDangerText;
-}
+    // Validation
+    .dijitTextBoxError {
+        color: $stateDangerText;
+        border-color: $stateDangerText;
+    }
 
-.dbootstrap .dijitTextBoxError.dijitTextBoxFocused {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten($stateDangerText, 20%);
-}
+    .dijitTextBoxError.dijitTextBoxFocused {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten($stateDangerText, 20%);
+    }
 
-.dbootstrap .dijitValidationContainer {
-    display: none;
+    .dijitValidationContainer {
+        display: none;
+    }
 }

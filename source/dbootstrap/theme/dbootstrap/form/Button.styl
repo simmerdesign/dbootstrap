@@ -4,185 +4,188 @@
 // Common styling
 //
 
-.dbootstrap .dijitButtonNode {
-    border: none;
-}
+.dbootstrap {
 
-.dbootstrap .dijitButtonNode * {
-    vertical-align: baseline;
-}
+    .dijitButtonNode {
+        border: none;
+    }
 
-.dbootstrap .dijitButtonNode .dijitIcon {
-    // Keeps button heights with and without icons the same
-    line-height: $lineHeightBase * 0.65;
-}
+    .dijitButtonNode * {
+        vertical-align: baseline;
+    }
 
-.dbootstrap .dijitButton .dijitButtonNode,
-.dbootstrap .dijitDropDownButton .dijitButtonNode,
-.dbootstrap .dijitComboButton .dijitButtonNode,
-.dbootstrap .dijitToggleButton .dijitButtonNode {
-    display: block; // Stretch to fill space
-    padding: 6px 14px;
-    margin-bottom: 0; // For input.btn
-    font-size: $fontSizeBase;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: $btnBackground;
-    border: 1px solid $btnBorder;
-    border-bottom-color: darken($btnBorder, 10%);
-    border-radius: 4px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
-}
+    .dijitButtonNode .dijitIcon {
+        // Keeps button heights with and without icons the same
+        line-height: $lineHeightBase * 0.65;
+    }
 
-// Colours
-.dbootstrap .primary .dijitButtonNode,
-.dbootstrap .btn-primary .dijitButtonNode {
-    background-color: $btnPrimaryBackground;
-    border-color: $btnPrimaryBorder;
-    color: $btnPrimaryColor;
-}
+    .dijitButton .dijitButtonNode,
+    .dijitDropDownButton .dijitButtonNode,
+    .dijitComboButton .dijitButtonNode,
+    .dijitToggleButton .dijitButtonNode {
+        display: block; // Stretch to fill space
+        padding: 6px 14px;
+        margin-bottom: 0; // For input.btn
+        font-size: $fontSizeBase;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: $btnBackground;
+        border: 1px solid $btnBorder;
+        border-bottom-color: darken($btnBorder, 10%);
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+    }
 
-.dbootstrap .warning .dijitButtonNode,
-.dbootstrap .btn-warning .dijitButtonNode {
-    background-color: $btnWarningBackground;
-    border-color: $btnWarningBorder;
-    color: $btnWarningColor;
-}
+    // Colours
+    .primary .dijitButtonNode,
+    .btn-primary .dijitButtonNode {
+        background-color: $btnPrimaryBackground;
+        border-color: $btnPrimaryBorder;
+        color: $btnPrimaryColor;
+    }
 
-.dbootstrap .danger .dijitButtonNode,
-.dbootstrap .btn-danger .dijitButtonNode {
-    background-color: $btnDangerBackground;
-    border-color: $btnDangerBorder;
-    color: $btnDangerColor;
-}
+    .warning .dijitButtonNode,
+    .btn-warning .dijitButtonNode {
+        background-color: $btnWarningBackground;
+        border-color: $btnWarningBorder;
+        color: $btnWarningColor;
+    }
 
-.dbootstrap .success .dijitButtonNode,
-.dbootstrap .btn-success .dijitButtonNode {
-    background-color: $btnSuccessBackground;
-    border-color: $btnSuccessBorder;
-    color: $btnSuccessColor;
-}
+    .danger .dijitButtonNode,
+    .btn-danger .dijitButtonNode {
+        background-color: $btnDangerBackground;
+        border-color: $btnDangerBorder;
+        color: $btnDangerColor;
+    }
 
-.dbootstrap .info .dijitButtonNode,
-.dbootstrap .btn-info .dijitButtonNode {
-    background-color: $btnInfoBackground;
-    border-color: $btnInfoBorder;
-    color: $btnInfoColor;
-}
+    .success .dijitButtonNode,
+    .btn-success .dijitButtonNode {
+        background-color: $btnSuccessBackground;
+        border-color: $btnSuccessBorder;
+        color: $btnSuccessColor;
+    }
 
-.dbootstrap .inverse .dijitButtonNode,
-.dbootstrap .btn-inverse .dijitButtonNode {
-    background-color: $btnInverseBackground;
-    border-color: $btnInverseBorder;
-    color: $btnInverseColor;
-}
+    .info .dijitButtonNode,
+    .btn-info .dijitButtonNode {
+        background-color: $btnInfoBackground;
+        border-color: $btnInfoBorder;
+        color: $btnInfoColor;
+    }
 
-// Hover
-.dbootstrap .dijitButtonHover .dijitButtonNode,
-.dbootstrap .dijitDropDownButtonHover .dijitButtonNode,
-.dbootstrap .dijitComboButton .dijitButtonNodeHover,
-.dbootstrap .dijitComboButton .dijitDownArrowButtonHover,
-.dbootstrap .dijitToggleButtonHover .dijitButtonNode {
-    text-decoration: none;
-}
+    .inverse .dijitButtonNode,
+    .btn-inverse .dijitButtonNode {
+        background-color: $btnInverseBackground;
+        border-color: $btnInverseBorder;
+        color: $btnInverseColor;
+    }
 
-// Active - pressed
-.dbootstrap .dijitButtonActive .dijitButtonNode,
-.dbootstrap .dijitComboButton .dijitButtonNodeActive,
-.dbootstrap .dijitToggleButtonActive .dijitButtonNode,
-.dbootstrap .dijitToggleButtonChecked .dijitButtonNode {
-    background-image: none;
-    outline: 0;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-}
+    // Hover
+    .dijitButtonHover .dijitButtonNode,
+    .dijitDropDownButtonHover .dijitButtonNode,
+    .dijitComboButton .dijitButtonNodeHover,
+    .dijitComboButton .dijitDownArrowButtonHover,
+    .dijitToggleButtonHover .dijitButtonNode {
+        text-decoration: none;
+    }
 
-.dbootstrap .dijitDropDownButtonActive .dijitButtonNode {
-    @extend .dbootstrap .dijitDropDownButtonHover .dijitButtonNode;
-}
+    // Active - pressed
+    .dijitButtonActive .dijitButtonNode,
+    .dijitComboButton .dijitButtonNodeActive,
+    .dijitToggleButtonActive .dijitButtonNode,
+    .dijitToggleButtonChecked .dijitButtonNode {
+        background-image: none;
+        outline: 0;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    }
 
-// Disabled
-.dbootstrap .dijitButtonDisabled .dijitButtonNode,
-.dbootstrap .dijitDropDownButtonDisabled .dijitButtonNode,
-.dbootstrap .dijitComboButtonDisabled .dijitButtonNode,
-.dbootstrap .dijitToggleButtonDisabled .dijitButtonNode {
-    cursor: not-allowed;
-    background-image: none;
-    opacity: 0.65;
-    box-shadow: none;
-}
+    .dijitDropDownButtonActive .dijitButtonNode {
+        @extend .dbootstrap .dijitDropDownButtonHover .dijitButtonNode;
+    }
 
-.dbootstrap .dijitToggleButtonDisabled.dijitToggleButtonChecked .dijitButtonNode {
-    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-}
+    // Disabled
+    .dijitButtonDisabled .dijitButtonNode,
+    .dijitDropDownButtonDisabled .dijitButtonNode,
+    .dijitComboButtonDisabled .dijitButtonNode,
+    .dijitToggleButtonDisabled .dijitButtonNode {
+        cursor: not-allowed;
+        background-image: none;
+        opacity: 0.65;
+        box-shadow: none;
+    }
 
-// Content
-.dbootstrap .dijitButtonText {
-    padding: 0 0.3em;
-    text-align: center;
-}
+    .dijitToggleButtonDisabled.dijitToggleButtonChecked .dijitButtonNode {
+        box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    }
 
-// Arrow
-.dbootstrap .dijitArrowButtonInner {
-    @extend .dbootstrap .dijitButtonNode .dijitIcon;
-    height: auto;
-    width: auto;
-}
+    // Content
+    .dijitButtonText {
+        padding: 0 0.3em;
+        text-align: center;
+    }
 
-.dbootstrap .dijitArrowButtonInner:before {
-    @extend .dijitIcon:before;
-    @extend .icon-caret-down:before;
-}
+    // Arrow
+    .dijitArrowButtonInner {
+        @extend .dbootstrap .dijitButtonNode .dijitIcon;
+        height: auto;
+        width: auto;
+    }
 
-.dbootstrap .dijitUpArrowButton .dijitArrowButtonInner:before {
-    @extend .icon-caret-up:before;
-}
+    .dijitArrowButtonInner:before {
+        @extend .dijitIcon:before;
+        @extend .icon-caret-down:before;
+    }
 
-// Specific Styling
-//
+    .dijitUpArrowButton .dijitArrowButtonInner:before {
+        @extend .icon-caret-up:before;
+    }
 
-// Combo Box
-.dbootstrap .dijitComboButton td.dijitStretch,
-.dbootstrap .dijitComboButton td.dijitArrowButton {
-    display: table-cell;
-}
+    // Specific Styling
+    //
 
-.dbootstrap .dijitComboButton .dijitArrowButton {
-    border-left-width: 0;
-    padding: 6px 10px;
-    border-radius: 0 4px 4px 0;
-}
+    // Combo Box
+    .dijitComboButton td.dijitStretch,
+    .dijitComboButton td.dijitArrowButton {
+        display: table-cell;
+    }
 
-.dbootstrap .dijitComboButton .dijitArrowButton.dijitHasDropDownOpen {
-    @extend .dbootstrap .dijitButtonActive .dijitButtonNode;
-}
+    .dijitComboButton .dijitArrowButton {
+        border-left-width: 0;
+        padding: 6px 10px;
+        border-radius: 0 4px 4px 0;
+    }
 
-.dbootstrap .dijitComboButton .dijitStretch {
-    border-radius: 4px 0 0 4px;
-}
+    .dijitComboButton .dijitArrowButton.dijitHasDropDownOpen {
+        @extend .dbootstrap .dijitButtonActive .dijitButtonNode;
+    }
 
-.dbootstrap table.dijitComboButton {
-    border-collapse: separate;
-}
+    .dijitComboButton .dijitStretch {
+        border-radius: 4px 0 0 4px;
+    }
+
+    table.dijitComboButton {
+        border-collapse: separate;
+    }
 
 
 
-// Button sizes
-.dbootstrap .btn-lg .dijitButtonNode {
-    border-radius: $borderRadiusLarge;
-    font-size: $fontSizeLarge;
-    line-height: $lineHeightLarge;
-    padding: $paddingLargeVertical $paddingLargeHorizontal;
-}
-.dbootstrap .btn-sm .dijitButtonNode {
-    border-radius: $borderRadiusSmall;
-    font-size: $fontSizeSmall;
-    line-height: $lineHeightSmall;
-    padding: $paddingSmallVertical $paddingSmallHorizontal;
-}
-.dbootstrap .btn-xs .dijitButtonNode {
-    border-radius: $borderRadiusSmall;
-    font-size: $fontSizeSmall;
-    line-height: $lineHeightSmall;
-    padding: $paddingXsVertical $paddingXsHorizontal;
+    // Button sizes
+    .btn-lg .dijitButtonNode {
+        border-radius: $borderRadiusLarge;
+        font-size: $fontSizeLarge;
+        line-height: $lineHeightLarge;
+        padding: $paddingLargeVertical $paddingLargeHorizontal;
+    }
+    .btn-sm .dijitButtonNode {
+        border-radius: $borderRadiusSmall;
+        font-size: $fontSizeSmall;
+        line-height: $lineHeightSmall;
+        padding: $paddingSmallVertical $paddingSmallHorizontal;
+    }
+    .btn-xs .dijitButtonNode {
+        border-radius: $borderRadiusSmall;
+        font-size: $fontSizeSmall;
+        line-height: $lineHeightSmall;
+        padding: $paddingXsVertical $paddingXsHorizontal;
+    }
 }
