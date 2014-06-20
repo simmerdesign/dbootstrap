@@ -1,0 +1,260 @@
+//
+// Button groups
+// --------------------------------------------------
+
+.dbootstrap {
+
+    // Make the div behave like a button
+    .btn-group,
+    .btn-group-vertical {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle; // match .btn alignment given font-size hack above
+        > .dijitButton {
+            position: relative;
+            float: left;
+            // Bring the "active" button to the front
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                z-index: 2;
+            }
+            &:focus {
+                // Remove focus outline when dropdown JS adds it after closing the menu
+                outline: none;
+            }
+        }
+    }
+
+    // Prevent double borders when buttons are next to each other
+    .btn-group {
+        .dijitButton,
+        .btn-group {
+            margin-right: 0;
+        }
+        .dijitButton + .dijitButton,
+        .dijitButton + .btn-group,
+        .btn-group + .dijitButton,
+        .btn-group + .btn-group {
+            margin-left: -1px;
+        }
+    }
+
+    // Optional: Group multiple button groups together for a toolbar
+    .btn-toolbar {
+        clearfix();
+
+        .btn-group {
+            float: left;
+        }
+        // Space out series of button groups
+        > .dijitButton,
+        > .btn-group {
+            + .dijitButton,
+            + .btn-group {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .btn-group > .dijitButton:not(:first-child):not(:last-child):not(.dropdown-toggle) > .dijitButtonNode {
+        border-radius: 0;
+    }
+
+    // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+    .btn-group > .dijitButton:first-child {
+        & > .dijitButtonNode {
+            margin-left: 0;
+        }
+        &:not(:last-child):not(.dropdown-toggle) > .dijitButtonNode {
+            borderRightRadius(0);
+        }
+    }
+    // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+    .btn-group > .dijitButton:last-child:not(:first-child),
+    .btn-group > .dropdown-toggle:not(:first-child) {
+        & > .dijitButtonNode {
+            borderLeftRadius(0);
+        }
+    }
+
+    // Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+    .btn-group > .btn-group {
+        float: left;
+    }
+    .btn-group > .btn-group:not(:first-child):not(:last-child) > .dijitButton > .dijitButtonNode {
+        border-radius: 0;
+    }
+    .btn-group > .btn-group:first-child {
+        > .dijitButton:last-child,
+        > .dropdown-toggle {
+            & > .dijitButtonNode {
+                borderRightRadius(0);
+            }
+        }
+    }
+    .btn-group > .btn-group:last-child > .dijitButton:first-child > .dijitButtonNode {
+        borderLeftRadius(0);
+    }
+
+    // On active and open, don't show outline
+    .btn-group .dropdown-toggle:active,
+    .btn-group.open .dropdown-toggle {
+        outline: 0;
+    }
+
+
+    // Sizing
+    //
+    // Remix the default button sizing classes into new ones for easier manipulation.
+
+    .btn-group-xs > .dijitButton .dijitButtonNode {
+        @extend .dbootstrap .btn-xs .dijitButtonNode;
+    }
+    .btn-group-sm > .dijitButton .dijitButtonNode {
+        @extend .dbootstrap .btn-sm .dijitButtonNode;
+    }
+    .btn-group-lg > .dijitButton .dijitButtonNode {
+        @extend .dbootstrap .btn-lg .dijitButtonNode;
+    }
+
+
+    // Split button dropdowns
+    // ----------------------
+
+    // Give the line between buttons some depth
+    .btn-group > .dijitButton + .dropdown-toggle {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .btn-group > .btn-lg + .dropdown-toggle {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    // The clickable button for toggling the menu
+    // Remove the gradient and set the same inset shadow as the :active state
+    .btn-group.open .dropdown-toggle {
+        boxShadow(inset 0 3px 5px rgba(0,0,0,.125));
+
+        // Show no shadow for `.btn-link` since it has no other button styles.
+        &.btn-link {
+            boxShadow(none);
+        }
+    }
+
+
+    // Reposition the caret
+    .dijitButton .caret {
+        margin-left: 0;
+    }
+    // Carets in other button sizes
+    .btn-lg .caret {
+        border-width: $caretWidthLarge $caretWidthLarge 0;
+        border-bottom-width: 0;
+    }
+    // Upside down carets for .dropup
+    .dropup .btn-lg .caret {
+        border-width: 0 $caretWidthLarge $caretWidthLarge;
+    }
+
+
+    // Vertical button groups
+    // ----------------------
+
+    .btn-group-vertical {
+        > .dijitButton,
+        > .btn-group,
+        > .btn-group > .dijitButton {
+            display: block;
+            float: none;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        // Clear floats so dropdown menus can be properly placed
+        > .btn-group {
+            clearfix();
+            > .dijitButton {
+                float: none;
+            }
+        }
+
+        > .dijitButton + .dijitButton,
+        > .dijitButton + .btn-group,
+        > .btn-group + .dijitButton,
+        > .btn-group + .btn-group {
+            margin-top: -1px;
+            margin-left: 0;
+        }
+    }
+
+    .btn-group-vertical > .dijitButton {
+        &:not(:first-child):not(:last-child) {
+            & > .dijitButtonNode {
+                border-radius: 0;
+            }
+        }
+        &:first-child:not(:last-child) {
+            & > .dijitButtonNode {
+                border-top-right-radius: $borderRadiusBase;
+                borderBottomRadius(0);
+            }
+        }
+        &:last-child:not(:first-child) {
+            & > .dijitButtonNode {
+                border-bottom-left-radius: $borderRadiusBase;
+                borderTopRadius(0);
+            }
+        }
+    }
+    .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .dijitButton {
+        & > .dijitButtonNode {
+            border-radius: 0;
+        }
+    }
+    .btn-group-vertical > .btn-group:first-child {
+        > .dijitButton:last-child,
+        > .dropdown-toggle {
+            & > .dijitButtonNode {
+                borderBottomRadius(0);
+            }
+        }
+    }
+    .btn-group-vertical > .btn-group:last-child > .dijitButton:first-child {
+        & > .dijitButtonNode {
+            borderTopRadius(0);
+        }
+    }
+
+
+
+    // Justified button groups
+    // ----------------------
+
+    .btn-group-justified {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        > .dijitButton,
+        > .btn-group {
+            float: none;
+            display: table-cell;
+            width: 1%;
+        }
+        > .btn-group .dijitButton {
+            width: 100%;
+        }
+    }
+
+
+    // Checkbox and radio options
+    [data-toggle="buttons"] > .btn > input[type="radio"],
+    [data-toggle="buttons"] > .btn > input[type="checkbox"],
+    [data-toggle="buttons"] > .dijitButton > input[type="radio"],
+    [data-toggle="buttons"] > .dijitButton > input[type="checkbox"] {
+        display: none;
+    }
+}
